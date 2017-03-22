@@ -1,0 +1,128 @@
+<!-- Описание структуры документа расположено по адресу https://github.com/TeachMePleaseCorp/xml/wiki -->
+
+<!-- Курсы: https://github.com/TeachMePleaseCorp/xml/wiki/%D0%A1%D1%82%D1%80%D1%83%D0%BA%D1%82%D1%83%D1%80%D0%B0-%D0%BA%D1%83%D1%80%D1%81%D0%BE%D0%B2 -->
+<courses>
+  <course>
+    <id>1</id>
+    <name>Компьютер для начинающих</name>
+
+    <!-- Теги курса (необходимо указать как минимум один) -->
+    <!-- Значение атрибута "id" можно получить с помощью метода API /tags:-->
+    <!-- https://github.com/TeachMePleaseCorp/api/wiki#get-tags -->
+    <tags>
+      <tag id="1"></tag>
+      <tag id="3"></tag>
+    </tags>
+
+    <!-- Короткое описание (не более 260 символов) -->
+    <short-description>Умение грамотно и эффективно пользоваться ПК
+  сегодня — насущная необходимость</short-description>
+
+    <description>
+      Если вы хотите увеличить эффективность Вашей деятельности,
+      повысить профессиональный статус, то Вам необходимо пройти курсы для
+      пользователей ПК в нашем учебном центре. Это поможет Вам не тратить время
+      на самостоятельное освоение офисных программ, а сосредоточить внимание
+      на работе. (и еще много текста)
+    </description>
+
+    <published>true</published>
+    <!-- Ограничение по возрасту (если есть) -->
+    <age min="12" max="60"></age>
+    <language>ru</language>
+    <video-url>https://www.youtube.com/watch?v=oRenQ1TzSc8</video-url>
+    <background-image>https://s-media-cache-ak0.pinimg.com/564x/bf/d1/66/bfd16686a7fc8861b0d3d49e190d96f3.jpg</background-image>
+
+    <!-- Занятия: https://github.com/TeachMePleaseCorp/xml/wiki/%D0%A1%D1%82%D1%80%D1%83%D0%BA%D1%82%D1%83%D1%80%D0%B0-%D0%B7%D0%B0%D0%BD%D1%8F%D1%82%D0%B8%D0%B9 -->
+    <lessons>
+      <lesson>
+        <id>12</id>
+        <type>video</type>
+        <price>911</price>
+        <max-pupils>12</max-pupils>
+        <!-- Тип покупки, возможные значения см. https://github.com/TeachMePleaseCorp/xml/wiki/%D0%A1%D1%82%D1%80%D1%83%D0%BA%D1%82%D1%83%D1%80%D0%B0-%D0%B7%D0%B0%D0%BD%D1%8F%D1%82%D0%B8%D0%B9 -->
+        <pay-target>5</pay-target>
+        <!-- Информация о видеозанятии: https://github.com/TeachMePleaseCorp/xml/wiki/%D0%94%D0%B0%D0%BD%D0%BD%D1%8B%D0%B5:-%D0%B2%D0%B8%D0%B4%D0%B5%D0%BE-%D0%B7%D0%B0%D0%BD%D1%8F%D1%82%D0%B8%D1%8F -->
+        <video>
+          <link>https://www.youtube.com/watch?v=oRenQ1TzSc8</link>
+          <information>Пароль: 123456</information>
+          <preview-link>https://www.youtube.com/watch?v=oRenQ1TzSc8</preview-link>
+          <count>12</count>
+          <duration>320</duration>
+        </video>
+      </lesson>
+      <lesson>
+        <id>14</id>
+        <type>online</type>
+        <price>999</price>
+        <!-- Тип покупки, возможные значения см. https://github.com/TeachMePleaseCorp/xml/wiki/%D0%A1%D1%82%D1%80%D1%83%D0%BA%D1%82%D1%83%D1%80%D0%B0-%D0%B7%D0%B0%D0%BD%D1%8F%D1%82%D0%B8%D0%B9 -->
+        <pay-target>8</pay-target>
+        <!-- Идентификатор способа обучения, который можно получить с помощью метода API /lesson_methods:-->
+        <!-- https://github.com/TeachMePleaseCorp/api/wiki#get-lesson_methods -->
+        <method>1</method>
+        <!-- Расписание: https://github.com/TeachMePleaseCorp/xml/wiki/%D0%94%D0%B0%D0%BD%D0%BD%D1%8B%D0%B5:-%D1%80%D0%B0%D1%81%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5 -->
+        <timetable>
+          <date-by-agreement>true</date-by-agreement>
+          <time-by-agreement>false</time-by-agreement>
+          <start>17:30</start>
+          <duration>120</duration>
+        </timetable>
+      </lesson>
+    </lessons>
+  </course>
+
+  <course>
+    <id>2</id>
+    <name>Компьютер для профи</name>
+
+    <tags>
+      <tag id="2"></tag>
+      <tag id="3"></tag>
+    </tags>
+
+    <short-description>Умение быть профи за ПК</short-description>
+
+    <description>
+      Описание того как быть проффесионалом
+    </description>
+
+    <level>hard</level>
+    <published>true</published>
+    <age min="18" max="40"></age>
+    <video-url>https://www.youtube.com/watch?v=oRenQ1TzSc8</video-url>
+    <background-image>https://s-media-cache-ak0.pinimg.com/564x/bf/d1/66/bfd16686a7fc8861b0d3d49e190d96f3.jpg</background-image>
+
+    <lessons>
+      <lesson>
+        <id>17</id>
+        <type>offline</type>
+        <method>1</method>
+        <max-pupils>10</max-pupils>
+        <price>1999</price>
+        <pay-target>4</pay-target>
+        <timetable>
+          <date-by-agreement>false</date-by-agreement>
+          <start-date>2017-05-09</start-date>
+          <lessons-count>10</lessons-count>
+          <lessons-per-week>3</lessons-per-week>
+          <weekdays>
+            <weekday>monday</weekday>
+            <weekday>tuesday</weekday>
+            <weekday>saturday</weekday>
+          </weekdays>
+          <time-by-agreement>true</time-by-agreement>
+        </timetable>
+        <!-- Адрес: https://github.com/TeachMePleaseCorp/xml/wiki/%D0%94%D0%B0%D0%BD%D0%BD%D1%8B%D0%B5:-%D0%B0%D0%B4%D1%80%D0%B5%D1%81 -->
+        <address>
+          <country>Россия</country>
+          <city>Чебоксары</city>
+          <state>Чувашская республика</state>
+          <street>Гагарина</street>
+          <house-number>12/4</house-number>
+          <office-number>161</office-number>
+          <zip-code>428031</zip-code>
+        </address>
+      </lesson>
+    </lessons>
+  </course>
+</courses>
